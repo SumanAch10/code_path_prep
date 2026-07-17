@@ -37,5 +37,7 @@ class Solution:
             else:
                 hash_map[num] +=1
         
-        output = [num for num in nums if hash_map[num] <= k ] 
-        return list(set(output))
+        sorted_pairs = sorted(hash_map.items(),key=lambda pair:pair[1],reversed= True)
+        
+        return [num for num,count in sorted_pairs[:k]]
+        # return list(set(output))
