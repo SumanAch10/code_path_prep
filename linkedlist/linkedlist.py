@@ -21,5 +21,9 @@ class Linkedlist:
             curr = curr.next
         
         curr.next = new_node
-        
+    
+    def pre_pend(self,data):
+        new_node = Node(data)
+        new_node.next = self.head
+        self.head = new_node 
             
